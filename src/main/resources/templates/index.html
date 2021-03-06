@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Spring библиотека</title>
+    <!-- Bootstrap CSS -->
+    <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link href="/webjars/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-light">
+<div th:insert="~{fragments/navbar :: navbar}"></div>
+<div class="container">
+    <h2 th:text="#{localized.library}"></h2>
+    <table class="table thead-light table-striped table-hover w-auto">
+        <thead>
+        <tr>
+            <th th:text="#{localized.userName}"></th>
+            <th th:text="#{localized.userBirthday}"></th>
+            <th th:text="#{localized.userMail}"></th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.birthday}"></td>
+            <td th:text="${user.mail}"></td>
+            <td>
+                <a class="btn btn-primary btn-sm" href="edit.html"
+                   th:href="@{/user/{userId}(userId=${user.id})}"
+                   th:method="get" type="button"
+                   th:text="#{localized.show}"></a>
+            </td>
+            <td>
+                <a class="btn btn-secondary btn-sm" href="user.html"
+                   th:href="@{/user/{userId}/delete(userId=${user.id})}"
+                   th:method="get" type="button"
+                   th:text="#{localized.delete}"></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <a class="btn btn-outline-primary btn-sm" href="edit.html"
+       th:href="@{/user/add}"
+       th:method="get"
+       th:text="#{localized.addUser}" type="button"></a>
+
+    <a class="btn btn-outline-info btn-sm" href="edit.html"
+       th:href="@{/user/download}"
+       th:method="get"
+       th:text="#{localized.download}" type="button"></a>
+</div>
+</body>
+</html>
