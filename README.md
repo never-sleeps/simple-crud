@@ -7,4 +7,4 @@
 ![](screenshots/app.png)
 
 
-Подробное описание первого запуска проекта: first_start.md
+**[Описание первого запуска проекта](https://github.com/never-sleeps/simple-crud/blob/master/first_start.md)**
