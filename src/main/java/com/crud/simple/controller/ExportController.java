@@ -28,7 +28,7 @@ public class ExportController {
             log.info("Экспорт данных пользователей в xls");
             File file = exportService.exportUsersToFile();
             InputStream is = new FileInputStream(file);
-            response.setContentType("application/xlsx");
+            response.setContentType("application/xls");
             response.setHeader("Content-Disposition", String.format("attachment; filename=\"%s\"", file.getName()));
             org.apache.commons.io.IOUtils.copy(is, response.getOutputStream());
             response.flushBuffer();
