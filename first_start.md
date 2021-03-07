@@ -13,7 +13,7 @@
 Запуск проекта производится запуском метода main из файла simple-crud/src/main/java/com/crud/simple/SimpleCrudApplication.java
 
 Консоль в случае успешного запуска:
-
+![3](screenshots/3.png)
 
 После чего можно переходить в браузер. Приложение будет доступно по ссылке: http://localhost:8080/
 ![4](screenshots/4.png)
