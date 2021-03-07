@@ -42,15 +42,19 @@
         </tr>
         </tbody>
     </table>
-    <a class="btn btn-outline-primary btn-sm" href="edit.html"
-       th:href="@{/user/add}"
-       th:method="get"
-       th:text="#{localized.addUser}" type="button"></a>
 
-    <a class="btn btn-outline-info btn-sm" href="edit.html"
-       th:href="@{/user/download}"
-       th:method="get"
-       th:text="#{localized.download}" type="button"></a>
+    <div>
+        <a class="btn btn-outline-primary btn-sm" href="edit.html" style="width: 190px"
+           th:href="@{/user/add}"
+           th:method="get"
+           th:text="#{localized.addUser}" type="button"></a>
+
+        <a class="btn btn-outline-info btn-sm" href="index.html" style="width: 210px"
+           th:href="@{|/user/export|}"
+           th:method="get"
+           th:text="#{localized.download}" type="button"></a>
+    </div>
+
 </div>
 </body>
 </html>
