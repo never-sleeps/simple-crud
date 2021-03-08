@@ -36,14 +36,14 @@
 
         <div class="form-group">
             <label for="birthday-input" th:text="#{localized.userBirthday}"></label>
-            <input class="form-control" id="birthday-input" readonly type="text"
+            <input class="form-control" id="birthday-input" readonly type="date"
                    th:field="*{birthday}"
                    th:value="*{birthday}"/>
         </div>
 
         <div class="form-group">
             <label for="mail-input" th:text="#{localized.userMail}"></label>
-            <input class="form-control" id="mail-input" readonly type="text"
+            <input class="form-control" id="mail-input" readonly type="email"
                    th:field="*{mail}"
                    th:value="*{mail}"/>
         </div>
